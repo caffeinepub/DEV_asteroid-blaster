@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 0.08 0.01 265;
+    --foreground: 0.95 0.02 210;
+    --card: 0.1 0.015 265;
+    --card-foreground: 0.95 0.02 210;
+    --popover: 0.1 0.015 265;
+    --popover-foreground: 0.95 0.02 210;
+    --primary: 0.85 0.2 195;
+    --primary-foreground: 0.05 0.01 265;
+    --secondary: 0.15 0.02 265;
+    --secondary-foreground: 0.85 0.02 210;
+    --muted: 0.15 0.02 265;
+    --muted-foreground: 0.55 0.04 220;
+    --accent: 0.85 0.2 195;
+    --accent-foreground: 0.05 0.01 265;
+    --destructive: 0.65 0.25 27;
+    --destructive-foreground: 0.98 0.01 27;
+    --border: 0.2 0.03 265;
+    --input: 0.2 0.03 265;
+    --ring: 0.85 0.2 195;
+    --radius: 0.25rem;
+    --chart-1: 0.85 0.2 195;
+    --chart-2: 0.75 0.2 150;
+    --chart-3: 0.85 0.18 90;
+    --chart-4: 0.75 0.22 330;
+    --chart-5: 0.65 0.25 27;
+    --sidebar: 0.08 0.01 265;
+    --sidebar-foreground: 0.95 0.02 210;
+    --sidebar-primary: 0.85 0.2 195;
+    --sidebar-primary-foreground: 0.05 0.01 265;
+    --sidebar-accent: 0.15 0.02 265;
+    --sidebar-accent-foreground: 0.85 0.02 210;
+    --sidebar-border: 0.2 0.03 265;
+    --sidebar-ring: 0.85 0.2 195;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "JetBrains Mono", monospace;
+    overflow: hidden;
+  }
+}
