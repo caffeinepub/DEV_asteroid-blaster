@@ -1,37 +1,42 @@
 # Asteroid Blaster
 
 ## Current State
-New project with no existing frontend or backend logic.
+Fully functional Asteroids game with:
+- Ship movement, shooting, asteroid splitting
+- Particle explosions, lives system, level progression
+- Leaderboard (submit/view top scores)
+- Mobile touch controls
+- Start/game-over screens with animations
 
 ## Requested Changes (Diff)
 
 ### Add
-- A fun 2D arcade space shooter game built on HTML Canvas
-- Player controls a spaceship that can rotate and shoot
-- Asteroids spawn from edges and drift across the screen
-- Shooting asteroids splits large ones into smaller ones
-- Score tracking, lives system, and level progression
-- Game over and restart flow
-- Sound-free but visually polished with particle effects on explosions
-- Keyboard controls: arrow keys to rotate/thrust, spacebar to shoot
-- Mobile touch controls: on-screen buttons
+- **Screen shake**: brief camera shake on ship hit and large asteroid destruction
+- **Sound effects**: Web Audio API synthesized sounds (shoot, explosion, thrust, UFO, power-up)
+- **UFO enemy**: flying saucer that appears starting level 2, moves across screen and shoots at player. Small UFO = 1000pts, Large UFO = 200pts
+- **Power-ups**: dropped randomly when asteroids are destroyed (10% chance)
+  - Shield (blue orb): 5 seconds of invincibility with visible shield bubble
+  - Spread Shot (yellow orb): fires 3 bullets in spread for 10 seconds
+- **Combo multiplier**: destroying asteroids in quick succession (within 2s) builds a 2x/3x/4x multiplier shown on screen
+- **Hyperspace jump**: pressing H teleports ship to random position (with risk of appearing inside asteroid)
+- **Animated nebula background**: subtle colored cloud layers rendered in canvas for depth
 
 ### Modify
-- N/A
+- Thrust exhaust flame: make it more dynamic with varying length/color
+- Explosion particles: add debris lines (not just dots) for large asteroids
+- HUD: show active power-up timers, combo multiplier
+- Level transition: more dramatic with expanding ring effect
 
 ### Remove
-- N/A
+- Nothing removed
 
 ## Implementation Plan
-1. Create a single-page React app with a Canvas-based game component
-2. Implement game loop using requestAnimationFrame
-3. Player ship: rotation, thrust with inertia, screen wrap-around
-4. Bullets: fired from ship tip, limited to ~5 on screen
-5. Asteroids: 3 sizes (large/medium/small), random velocity, screen wrap
-6. Collision detection: bullet-asteroid, ship-asteroid
-7. Particle explosion effects on asteroid destruction
-8. Score: +20/50/100 for small/medium/large asteroids
-9. Lives: start with 3, brief invincibility after death
-10. Level up: increase asteroid count each wave
-11. UI overlay: score, lives, level, game over/start screen
-12. Touch controls for mobile
+1. Add UFO type, spawn logic (every ~15-25 seconds starting level 2), movement, and shooting AI
+2. Add PowerUp type, drop logic, collection detection, and effect application (shield bubble render, spread shot logic)
+3. Implement combo system: track last kill time, increment multiplier, display on HUD
+4. Implement screen shake: offset canvas context transform briefly on impacts
+5. Add Web Audio API sound manager: synthesize shoot (short beep), explosion (noise burst), thrust (low oscillator), UFO (warbling tone), powerup (ascending tone)
+6. Add nebula background: 2-3 large radial gradients slowly drifting, rendered before stars
+7. Add hyperspace: H key teleports ship
+8. Update HUD rendering for combo multiplier and power-up timers
+9. Improve thrust flame and add debris line particles
