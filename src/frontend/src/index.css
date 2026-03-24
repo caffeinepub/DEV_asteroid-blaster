@@ -17,48 +17,47 @@
 }
 
 @font-face {
-  font-family: "Instrument Serif";
-  src: url("/assets/fonts/InstrumentSerif-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 300 700;
   font-display: swap;
 }
 
 @layer base {
   :root {
-    --background: 0.98 0.005 250;
-    --foreground: 0.13 0.02 255;
-    --card: 0.99 0.003 250;
-    --card-foreground: 0.13 0.02 255;
-    --popover: 0.99 0.003 250;
-    --popover-foreground: 0.13 0.02 255;
-    --primary: 0.38 0.16 270;
-    --primary-foreground: 0.99 0.003 250;
-    --secondary: 0.94 0.01 255;
-    --secondary-foreground: 0.38 0.16 270;
-    --muted: 0.95 0.008 255;
-    --muted-foreground: 0.5 0.03 255;
-    --accent: 0.78 0.15 60;
-    --accent-foreground: 0.13 0.02 255;
+    --background: 0.12 0.01 145;
+    --foreground: 0.92 0.12 145;
+    --card: 0.16 0.015 145;
+    --card-foreground: 0.92 0.12 145;
+    --popover: 0.16 0.015 145;
+    --popover-foreground: 0.92 0.12 145;
+    --primary: 0.78 0.22 145;
+    --primary-foreground: 0.1 0.01 145;
+    --secondary: 0.22 0.02 145;
+    --secondary-foreground: 0.78 0.22 145;
+    --muted: 0.2 0.015 145;
+    --muted-foreground: 0.55 0.08 145;
+    --accent: 0.62 0.28 145;
+    --accent-foreground: 0.1 0.01 145;
     --destructive: 0.58 0.22 27;
     --destructive-foreground: 0.98 0.01 27;
-    --border: 0.9 0.01 255;
-    --input: 0.9 0.01 255;
-    --ring: 0.38 0.16 270;
-    --radius: 0.5rem;
-    --chart-1: 0.38 0.16 270;
-    --chart-2: 0.78 0.15 60;
-    --chart-3: 0.65 0.18 200;
-    --chart-4: 0.7 0.2 330;
+    --border: 0.25 0.04 145;
+    --input: 0.22 0.03 145;
+    --ring: 0.78 0.22 145;
+    --radius: 0.75rem;
+    --chart-1: 0.78 0.22 145;
+    --chart-2: 0.62 0.28 145;
+    --chart-3: 0.5 0.2 200;
+    --chart-4: 0.7 0.2 90;
     --chart-5: 0.58 0.22 27;
-    --sidebar: 0.98 0.005 250;
-    --sidebar-foreground: 0.13 0.02 255;
-    --sidebar-primary: 0.38 0.16 270;
-    --sidebar-primary-foreground: 0.99 0.003 250;
-    --sidebar-accent: 0.94 0.01 255;
-    --sidebar-accent-foreground: 0.38 0.16 270;
-    --sidebar-border: 0.9 0.01 255;
-    --sidebar-ring: 0.38 0.16 270;
+    --sidebar: 0.14 0.012 145;
+    --sidebar-foreground: 0.92 0.12 145;
+    --sidebar-primary: 0.78 0.22 145;
+    --sidebar-primary-foreground: 0.1 0.01 145;
+    --sidebar-accent: 0.22 0.02 145;
+    --sidebar-accent-foreground: 0.78 0.22 145;
+    --sidebar-border: 0.25 0.04 145;
+    --sidebar-ring: 0.78 0.22 145;
   }
 }
 
